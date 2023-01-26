@@ -1,0 +1,49 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PhpEntityGenerator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="s_Font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 12pt, style=Bold</Value>
+    </Setting>
+    <Setting Name="s_BGC" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="s_FGC" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="s_FieldTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">	/**
+	 * @Column({col_def})
+	 */
+	protected ${name};
+
+</Value>
+    </Setting>
+    <Setting Name="s_GetterTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">	/**
+	 * Get the value of {name}
+	 */
+	public function get{proper_name}()
+	{
+		return $this-&gt;{name};
+	}
+
+</Value>
+    </Setting>
+    <Setting Name="s_SetterTemplate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">	/**
+	 * Set the value of {name}
+	 * 
+	 * @return self
+	 */
+	public function set{proper_name}(${name})
+	{
+		$this-&gt;updateProperty('{name}', ${name});
+		
+		return $this;
+	}
+
+</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
